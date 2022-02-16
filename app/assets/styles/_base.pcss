@@ -1,0 +1,190 @@
+/* This file contains very basic styles. */
+
+.field-item {
+  .section-content {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-width: 1px 0 0;
+    border-style: solid;
+    -webkit-border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0))) 2%;
+    -webkit-border-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%) 2%;
+    -o-border-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%) 2%;
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0))) 2%;
+    border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%) 2%;
+
+    @mixin xs-max {
+      padding: 46px 0;
+    }
+    @mixin sm-min {
+      padding: 7.5% 0;
+    }
+
+    p,
+    ul,
+    ol {
+      margin-bottom: 1.2em;
+    }
+    li {
+      padding-right: 0;
+      margin-bottom: 0.4em;
+    }
+
+    ul.bullet-points {
+      list-style: none;
+      margin: 0;
+      margin-bottom: 1.2em;
+      padding: 0 0 0 20px;
+      li {
+        position: relative;
+        padding-right: 0;
+        margin-bottom: 0.4em;
+        &:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 8px;
+          left: -16px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $color-grey-l;
+      line-height: 1.1em;
+    }
+
+    a.btn {
+      &:hover,
+      &:focus {
+      }
+    }
+    .section-head {
+      text-align: center;
+      padding-bottom: 10px;
+
+      h2.title {
+        color: $color-grey-l;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 22px;
+        @mixin sm-min {
+          font-size: 26px;
+        }
+        @mixin md-min {
+          font-size: 28px;
+        }
+        @mixin lg-min {
+          font-size: 32px;
+        }
+
+        .m-title {
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .desc {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $color-grey-j;
+        font-size: 14px;
+        @mixin sm-min {
+          font-size: 16px;
+        }
+        @mixin md-min {
+          font-size: 17px;
+        }
+        @mixin lg-min {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .section-body {
+      .collapsible-item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @mixin sm-min {
+          display: block;
+          padding: 0;
+        }
+      }
+    }
+
+    .cta-container {
+      margin: 1em 0;
+      text-align: center;
+
+      p.cta-desc {
+        font-size: 14px;
+        @mixin md-min {
+          font-size: 16px;
+        }
+        @mixin lg-min {
+          font-size: 18px;
+        }
+      }
+
+      a {
+        display: inline-block;
+
+        &.btn {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: 3px auto;
+          max-width: 290px;
+          min-height: 62px;
+          padding: 10px 6px;
+          line-height: 1.1;
+
+          * {
+            text-decoration: none;
+          }
+
+          @mixin md-min {
+            padding: 14px 8px;
+          }
+          &:hover,
+          &:focus {
+            background-color: $color-primary-b80;
+          }
+          .btn-label {
+            padding: 0 0 4px 0;
+            font-size: 15px;
+            font-weight: 700;
+            @mixin md-min {
+              padding: 0 0 6px 0;
+              font-size: 16px;
+            }
+          }
+          .btn-sub {
+            font-size: 10px;
+            font-weight: 700;
+          }
+          .btn-text {
+            font-size: 15px;
+            font-weight: 700;
+            @mixin md-min {
+              font-size: 16px;
+            }
+          }
+        }
+        &.text {
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

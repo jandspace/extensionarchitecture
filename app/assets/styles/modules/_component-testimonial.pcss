@@ -1,0 +1,132 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      &.testimonial {
+        background-image: url("https://extensionarchitecture.co.uk/wp-content/uploads/2021/12/ea-testinomial-bg-768x432.jpg");
+
+        @media (min-width: 768px) {
+          background-attachment: fixed;
+          background-image: url("https://extensionarchitecture.co.uk/wp-content/uploads/2021/12/ea-testinomial-bg-1024x576.jpg");
+        }
+        @media (min-width: 1200px) {
+          background-image: url("https://extensionarchitecture.co.uk/wp-content/uploads/2021/12/ea-testinomial-bg-1536x864.jpg");
+        }
+        @media (min-width: 1600px) {
+          background-image: url("https://extensionarchitecture.co.uk/wp-content/uploads/2021/12/ea-testinomial-bg-2048x1152.jpg");
+        }
+
+        .carousel {
+          margin-bottom: 3%;
+          @media (max-width: 767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+          }
+          .carousel-inner {
+            width: 75%;
+            margin: 0 auto;
+            @media (min-width: 992px) {
+              width: 70%;
+            }
+
+            .carousel-item {
+              padding: 30px 0;
+              text-align: center;
+              color: #fff;
+
+              .profile {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto 10px;
+                background-image: url("https://extensionarchitecture.co.uk/wp-content/uploads/2021/12/ea-profile-image.jpg");
+                @media (min-width: 992px) {
+                  width: 80px;
+                  height: 80px;
+                }
+
+                .profile-image {
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .customer-rate {
+                font-size: 16px;
+                color: #ebc6a3;
+                margin-bottom: 1em;
+              }
+              .powered-by {
+                font-size: 12px;
+                color: $color-white;
+              }
+              .customer-comment {
+                p {
+                  font-size: 14px;
+                  font-family: Georgia, serif;
+                  font-style: italic;
+                  line-height: 1.58;
+
+                  @media (min-width: 992px) {
+                    font-size: 16px;
+                  }
+                  /* @media (min-width: 1200px) {
+                    font-size: 18px;
+                  } */
+                }
+              }
+              .customer-profile {
+                /* padding-top: 15px; */
+                .name {
+                  position: relative;
+                  padding-top: 15px;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 80px;
+                    height: 1px;
+                    top: 0;
+                    left: calc(50% - 40px);
+                    background-color: rgba(255, 255, 255, 0.4);
+                  }
+                }
+              }
+            }
+          }
+
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            width: 52px;
+            height: 52px;
+          }
+          .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M73.6 99l-49-49 49-49 1.8 1.9L28.3 50l47.1 47.1z'/%3E%3C/svg%3E");
+          }
+
+          .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23fff' d='M26.4 99l49-49-49-49-1.8 1.9L71.7 50 24.6 97.1z'/%3E%3C/svg%3E");
+          }
+
+          .carousel-indicators {
+            bottom: -24px;
+            li {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              background-color: $color-white;
+              box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+              border: none;
+              border-radius: 50%;
+              opacity: 0.25;
+              &.active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

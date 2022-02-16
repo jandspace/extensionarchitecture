@@ -1,0 +1,88 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      &.faq {
+        .accordion {
+          margin-bottom: 30px;
+          .faq-card {
+            background-color: #fff;
+            margin-bottom: 4px;
+
+            .faq-head {
+              position: relative;
+              display: block;
+              padding: 15px;
+              border: 1px solid #ddd;
+              font-size: 15px;
+              line-height: 1.25;
+              color: #202020;
+              font-weight: 500;
+              @media (min-width: 992px) {
+                font-size: 16px;
+                padding: 20px 15px;
+              }
+              @media (min-width: 1200px) {
+                font-size: 18px;
+              }
+
+              &:hover {
+                text-decoration: none;
+                background-color: $color-sand;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 16px;
+                height: 16px;
+                right: 10px;
+                top: calc(50% - 8px);
+              }
+              &[aria-expanded="false"] {
+                &:after {
+                  opacity: 0.5;
+                  transform: rotate(0deg);
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M12.7 30.7L5 38.3l59 59 59-59-7.7-7.7L64 82 12.7 30.7z'/%3E%3C/svg%3E");
+                }
+              }
+              &[aria-expanded="true"] {
+                &:after {
+                  opacity: 1;
+                  transform: rotate(180deg);
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M12.7 30.7L5 38.3l59 59 59-59-7.7-7.7L64 82 12.7 30.7z'/%3E%3C/svg%3E");
+                }
+              }
+            }
+            .faq-body {
+              padding: 15px;
+              border: 1px solid #ddd;
+              background-color: #f8f8f8;
+              border-top: 0;
+
+              .faq-ctas {
+                margin: 2rem 0;
+                a {
+                  display: inline-block;
+                  font-weight: 700;
+                  border: 1px solid $color-maroon;
+                  padding: 6px 15px;
+                  border-radius: 20px;
+                  text-decoration: none;
+                  font-size: 14px;
+                  margin: 3px;
+                  color: $color-maroon;
+                  border-color: $color-maroon;
+
+                  &:hover {
+                    background-color: $color-maroon;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

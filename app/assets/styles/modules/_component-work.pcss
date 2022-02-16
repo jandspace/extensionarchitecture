@@ -1,0 +1,168 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      &.works {
+        position: relative;
+
+        .section-head {
+          .section-title {
+          }
+        }
+
+        .section-body {
+          .flex-container {
+            justify-content: flex-start;
+            margin-left: -2px;
+            margin-right: -2px;
+
+            .flex-item {
+              padding: 2px;
+              flex: 0 0 100%;
+              max-width: 100%;
+
+              @media (min-width: 768px) {
+                flex: 0 0 50%;
+                max-width: 50%;
+              }
+
+              a.item-inner {
+                position: relative;
+                display: block;
+                overflow: hidden;
+                text-decoration: none;
+                &:before,
+                &:after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  z-index: 2;
+                }
+                &:before {
+                  width: 100%;
+                  padding-top: 14.2857142857%;
+                  bottom: -100%;
+                  transform: scale(1.01);
+                  background-size: cover;
+                  transition: all 0.3s;
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1680 240'%3E%3Cpath fill='%23F4F4F4' d='M1680 0v240H0v-37.3c148.4 17.4 297.7 26 447 25.9 481.5 0 917.5-87.4 1233-228.6z'/%3E%3C/svg%3E");
+                }
+                &:after {
+                  @media (max-width: 1199px) {
+                    font-size: 80%;
+                    content: "View ⇒";
+                    padding: 0 4px 4px;
+                  }
+                  @media (min-width: 1200px) {
+                    font-size: 14px;
+                    content: "View Case Study ⇒";
+                    padding: 0 10px 10px;
+                  }
+                  @media (min-width: 1680px) {
+                    font-size: 16px;
+                  }
+
+                  right: -200px;
+                  font-weight: 500;
+                  color: $color-maroon;
+                  transition: all 0.4s ease-in-out;
+                }
+
+                .image {
+                  border-radius: 8px;
+                  background-color: $color-grey-f;
+                  position: relative;
+                  overflow: hidden;
+                  transition: all 0.3s;
+                  &:before {
+                    content: "";
+                    position: relative;
+                    display: block;
+                    padding-top: 56.25%;
+                    z-index: 1;
+                  }
+
+                  > .img-container {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+
+                    img {
+                      display: none;
+                    }
+                  }
+                }
+                .desc {
+                  position: absolute;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 1.25;
+                  color: $color-white;
+                  text-shadow: 0 0 24px rgba(0, 0, 0, 0.75);
+                  padding: 18px;
+                  text-align: center;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  opacity: 0;
+                  transition: all 0.5s ease-in-out;
+                  z-index: 2;
+                  @media (min-width: 992px) {
+                    font-size: 18px;
+                  }
+                  @media (min-width: 1200px) {
+                    font-size: 20px;
+                  }
+                  @media (min-width: 1680px) {
+                    font-size: 24px;
+                  }
+                }
+
+                &:hover {
+                  &:before {
+                    bottom: -1px;
+                  }
+                  &:after {
+                    right: 0;
+                    transition-delay: 0.2s;
+                  }
+                  .image {
+                    &:before {
+                      background: rgba(0, 0, 0, 0.5);
+                    }
+                    .img-container {
+                      filter: grayscale(0.75);
+                      transform: scale(1.25);
+                      transition: transform 3.5s linear;
+                    }
+                  }
+
+                  .desc {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+
+            &.wide {
+              .flex-item {
+                @media (min-width: 768px) {
+                  flex: 0 0 50%;
+                  max-width: 50%;
+                }
+              }
+            }
+          }
+          .cta-container {
+            padding-top: 2.5em;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

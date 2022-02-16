@@ -1,0 +1,110 @@
+body[class*="service-prod"] {
+  .primary_content_wrap {
+    .services-prod-acf {
+      font-size: 14px;
+      padding-left: 0;
+      padding-right: 0;
+
+      .page {
+        .section-item:not(.hero) {
+          padding-top: 42px;
+          padding-bottom: 42px;
+          @media (min-width: 768px) {
+            padding-top: 7%;
+            padding-bottom: 7%;
+          }
+          .section-item-inner {
+          }
+          .section-head {
+          }
+          .section-body {
+            p {
+              a {
+                font-weight: 500;
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &.media-gallery {
+            background-color: $color-grey-k;
+            &:before {
+              filter: invert(100%) sepia(13%) saturate(43%) hue-rotate(244deg) brightness(112%) contrast(91%);
+            }
+            .section-item-inner {
+              .section-head {
+                h2.section-title {
+                  color: $color-white;
+                }
+              }
+            }
+          }
+
+          &.related-articles {
+            padding-top: 0;
+            background-color: $color-grey-k;
+            .section-item-inner {
+              .section-head {
+                h2.section-title {
+                  color: $color-white;
+                }
+              }
+              .section-body {
+                .flex-container {
+                  .flex-item {
+                    a.item-inner {
+                      .desc {
+                        color: $color-white;
+                      }
+                      .view {
+                        color: $color-sand;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.contact-link {
+            padding-top: 0;
+            background-color: $color-grey-k;
+            .section-body {
+              .contact {
+                max-width: 820px;
+                margin: 0 auto;
+                text-align: center;
+
+                h4 {
+                  color: $color-white;
+                  text-transform: none;
+                  margin-bottom: 1.5em;
+                  font-size: 16px;
+                  font-weight: 500;
+                  @media (min-width: 992px) {
+                    font-size: 18px;
+                  }
+                }
+
+                a.btn {
+                  margin: 3px;
+                }
+              }
+            }
+          }
+
+          &.testimonial {
+            background-color: $color-grey-k;
+            &:after {
+              filter: invert(100%) sepia(13%) saturate(43%) hue-rotate(244deg) brightness(112%) contrast(91%);
+            }
+          }
+
+          &.form {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  }
+}

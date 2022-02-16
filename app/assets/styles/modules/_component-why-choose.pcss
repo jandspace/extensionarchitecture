@@ -1,0 +1,45 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      &.why-choose {
+        background-color: $color-grey-k;
+        [class^="section-head"] {
+          h2.section-title {
+            color: $color-white;
+          }
+        }
+        [class^="section-body"] {
+          .body-item {
+            .item {
+              margin-bottom: 2.5em;
+            }
+            .image-container {
+              position: relative;
+              padding-top: 56.25%;
+              margin-bottom: 1.5em;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            h3.title {
+              color: $color-white;
+              font-size: 18px;
+              margin-bottom: 0.5em;
+              @media (min-width: 992px) {
+                font-size: 20px;
+              }
+            }
+            .desc {
+              color: $color-grey-g;
+            }
+          }
+        }
+      }
+    }
+  }
+}

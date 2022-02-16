@@ -1,0 +1,118 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      &.local-info-overview {
+        .cta-container {
+          margin-top: 3rem;
+          h3.title {
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+          }
+        }
+        .keyfacts {
+          position: relative;
+          margin-top: 30px;
+          padding: clamp(15px, 1.5vw, 36px);
+          background-color: $color-white;
+          border-radius: 15px;
+          box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+          z-index: 2;
+          @media (min-width: 768px) {
+            margin-top: 0;
+            transform: translateY(-58%);
+          }
+          @media (min-width: 1200px) {
+            margin-top: -1vw;
+          }
+          @media (min-width: 1680px) {
+            margin-top: -2.5vw;
+          }
+
+          .intro-summary {
+            margin-bottom: 3rem;
+            @media (max-width: 767px) {
+              margin: 1rem 0 3rem;
+            }
+
+            h3.s-title {
+              font-family: $heading-primary;
+              font-size: 18px;
+              margin-top: 0.5em;
+              margin-bottom: 2em;
+              text-align: center;
+              @media (min-width: 992px) {
+                font-size: 24px;
+              }
+              @media (min-width: 1200px) {
+                font-size: 28px;
+              }
+            }
+            .no-content {
+              text-align: center;
+              .no-ani {
+                font-family: $heading-primary;
+                font-size: 52px;
+                color: $color-grey-k;
+                line-height: 1.2;
+                letter-spacing: -0.025em;
+                @media (min-width: 768px) {
+                  font-size: 46px;
+                }
+                @media (min-width: 992px) {
+                  font-size: 52px;
+                }
+                @media (min-width: 1200px) {
+                  font-size: 62px;
+                }
+                @media (min-width: 1600px) {
+                  font-size: 4.5vw;
+                }
+                .fig-number,
+                sup {
+                  opacity: 0.1;
+                  transition: all 1s linear;
+                }
+                sup {
+                  color: $color-sand;
+                }
+              }
+            }
+            .no-desc {
+              color: $color-grey-j;
+              padding: 15px 0;
+            }
+          }
+          .council-summary {
+            border-top: 1px solid $color-sand;
+            padding: 1.5rem 0;
+            .desc {
+              a {
+                word-break: break-word;
+              }
+              p {
+                b {
+                  display: block;
+                  color: #202020;
+                  margin-bottom: 0.25rem;
+                }
+              }
+              .district-containter {
+                line-height: 1.6;
+                span {
+                  color: #808080;
+                }
+              }
+            }
+            .council-logo {
+              .logo-img {
+                width: 100%;
+                max-width: none;
+                max-height: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

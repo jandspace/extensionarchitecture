@@ -1,0 +1,40 @@
+.primary_content_wrap {
+  .page {
+    .section-item {
+      .read-more {
+        margin-bottom: 1.5em;
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+
+        &__link-wrap {
+          display: block;
+          margin-bottom: calc(30px + 2%);
+          .read-more__link {
+            border-top: 1px solid $color-grey-h;
+            padding-top: 0.5em;
+          }
+        }
+
+        &__link {
+          font-weight: 700;
+        }
+      }
+      .read-more.is-inline,
+      .read-more.is-inline p,
+      .read-more.is-inline + span {
+        display: inline;
+      }
+
+      .read-more.is-inline + span {
+        margin-left: 0.25em;
+      }
+
+      .read-more.is-inline.is-expanded + span {
+        display: inline-block;
+        margin-left: 0;
+      }
+    }
+  }
+}

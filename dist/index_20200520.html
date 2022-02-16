@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="en-US">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<head>
+	<meta name="ahrefs-site-verification" content="cf8a506158629d63f3308793011564774c2584a29e477d04e0b58b9d4ff82112">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Extension Architecture |
+	</title>
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link rel="icon" href="https://dev.ea:8890/wp-content/themes/eatheme2020/favicon.ico" type="image/x-icon" />
+	<link rel="pingback" href="https://dev.ea:8890/xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" title="Extension Architecture" href="https://dev.ea:8890/feed/" />
+	<link rel="alternate" type="application/atom+xml" title="Extension Architecture"
+		href="https://dev.ea:8890/feed/atom/" />
+	<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="https://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="warning bar" /></a>
+		</div>
+		<![endif]-->
+	<!-- Custom Style //Removed -->
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="https://dev.ea:8890/wp-content/themes/eatheme2020/style.css?v2.1.1" />
+			<link rel="stylesheet" type="text/css" media="all" href="https://dev.ea:8890/wp-content/themes/eatheme2020/style_base.css?v2.1.1" /> -->
+	<link rel="stylesheet" type="text/css" media="all"
+		href="https://dev.ea:8890/_wpdev/app/temp/styles/styles.css?v1.1.1" />
+	<!-- wp_head() -->
+	<!-- This site is optimized with the Yoast SEO plugin v11.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>* Home - Extension Architecture</title>
+	<link rel="canonical" href="https://dev.ea:8890/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="* Home - Extension Architecture" />
+	<meta property="og:description" content="NEW HOME" />
+	<meta property="og:url" content="https://dev.ea:8890/" />
+	<meta property="og:site_name" content="Extension Architecture" />
+	<meta property="og:image" content="https://dev.ea:8890/wp-content/uploads/2015/03/architecture-logo1.png" />
+	<meta property="og:image:secure_url"
+		content="https://dev.ea:8890/wp-content/uploads/2015/03/architecture-logo1.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:description" content="NEW HOME" />
+	<meta name="twitter:title" content="* Home - Extension Architecture" />
+	<meta name="twitter:site" content="@EArchiteture" />
+	<meta name="twitter:image" content="https://dev.ea:8890/wp-content/uploads/2015/03/architecture-logo1.png" />
+	<meta name="twitter:creator" content="@EArchiteture" />
+	<meta name="msvalidate.01" content="921AF5BB3712D25C0AB22C07B46C8EEA" />
+	<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>
+		{
+			"@context": "https://schema.org",
+			"@graph": [{
+				"@type": "Organization",
+				"@id": "https://dev.ea:8890/#organization",
+				"name": "Extension Architeture",
+				"url": "https://dev.ea:8890/",
+				"sameAs": ["https://www.facebook.com/extensionarchitecture",
+					"https://www.youtube.com/channel/UCLOhIQK3Y2SzCBugkur3Dcw", "https://twitter.com/EArchiteture"
+				],
+				"logo": {
+					"@type": "ImageObject",
+					"@id": "https://dev.ea:8890/#logo",
+					"url": "https://dev.ea:8890/wp-content/uploads/2014/04/logo.png",
+					"width": 180,
+					"height": 100,
+					"caption": "Extension Architeture"
+				},
+				"image": {
+					"@id": "https://dev.ea:8890/#logo"
+				}
+			}, {
+				"@type": "WebSite",
+				"@id": "https://dev.ea:8890/#website",
+				"url": "https://dev.ea:8890/",
+				"name": "Extension Architecture",
+				"publisher": {
+					"@id": "https://dev.ea:8890/#organization"
+				},
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://dev.ea:8890/?s={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}, {
+				"@type": "WebPage",
+				"@id": "https://dev.ea:8890/#webpage",
+				"url": "https://dev.ea:8890/",
+				"inLanguage": "en-US",
+				"name": "* Home - Extension Architecture",
+				"isPartOf": {
+					"@id": "https://dev.ea:8890/#website"
+				},
+				"about": {
+					"@id": "https://dev.ea:8890/#organization"
+				},
+				"datePublished": "2020-02-24T23:11:32+00:00",
+				"dateModified": "2020-02-25T00:47:35+00:00"
+			}]
+		}
+	</script>
+	<!-- / Yoast SEO plugin. -->
+	<link rel='dns-prefetch' href='//code.jquery.com' />
+	<link rel='dns-prefetch' href='//www.formstack.com' />
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<link rel="alternate" type="application/rss+xml" title="Extension Architecture &raquo; Feed"
+		href="https://dev.ea:8890/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Extension Architecture &raquo; Comments Feed"
+		href="https://dev.ea:8890/comments/feed/" />
+	<link rel='stylesheet' id='jquery.prettyphoto-css'
+		href='https://dev.ea:8890/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css?ver=5.3.2' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='video-lightbox-css'
+		href='https://dev.ea:8890/wp-content/plugins/wp-video-lightbox/wp-video-lightbox.css?ver=5.3.2' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='formstack-css-css' href='//www.formstack.com/forms/css/2/wordpress-post.css?ver=5.3.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='accordioncssfree-css'
+		href='https://dev.ea:8890/wp-content/plugins/sp-faq/css/jquery.accordion.css?ver=3.3.2' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='wpsm_tabs_r-font-awesome-front-css'
+		href='https://dev.ea:8890/wp-content/plugins/tabs-responsive/assets/css/font-awesome/css/font-awesome.min.css?ver=5.3.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wpsm_tabs_r_bootstrap-front-css'
+		href='https://dev.ea:8890/wp-content/plugins/tabs-responsive/assets/css/bootstrap-front.css?ver=5.3.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wpsm_tabs_r_animate-css'
+		href='https://dev.ea:8890/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.3.2' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='tfree-slick-css'
+		href='https://dev.ea:8890/wp-content/plugins/testimonial-free/public/assets/css/slick.css?ver=2.1.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='tfree-font-awesome-css'
+		href='https://dev.ea:8890/wp-content/plugins/testimonial-free/public/assets/css/font-awesome.min.css?ver=2.1.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='tfree-deprecated-style-css'
+		href='https://dev.ea:8890/wp-content/plugins/testimonial-free/public/assets/css/deprecated-style.css?ver=2.1.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='tfree-style-css'
+		href='https://dev.ea:8890/wp-content/plugins/testimonial-free/public/assets/css/style.css?ver=2.1.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wpos-slick-style-css'
+		href='https://dev.ea:8890/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/css/slick.css?ver=2.3.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='logo_showcase_style-css'
+		href='https://dev.ea:8890/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/css/logo-showcase.css?ver=2.3.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='spu-public-css-css'
+		href='https://dev.ea:8890/wp-content/plugins/popups/public/assets/css/public.css?ver=1.9.3.6' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='jquery.lightbox.min.css-css'
+		href='https://dev.ea:8890/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.8'
+		type='text/css' media='all' />
+	<script>
+		//if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}
+	</script>
+	<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js?ver=1.9.1'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/modernizr.js?ver=2.0.6'>
+	</script>
+	<script type='text/javascript'>
+		jQuery.browser = {};
+		(function () {
+			jQuery.browser.msie = false;
+			jQuery.browser.version = 0;
+			if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+				jQuery.browser.msie = true;
+				jQuery.browser.version = RegExp.$1;
+			}
+		})();
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.easing.1.3.js?ver=1.3'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.prettyPhoto.js?ver=3.1.3'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.nivo.slider.js?ver=2.5.2'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.loader.js?ver=1.0'>
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.elastislide.js?ver=1.0'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.cycle.all.js?ver=2.99'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/si.files.js?ver=1.0'>
+	</script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/bootstrap.js?ver=1.0'>
+	</script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/responsive.js?ver=1.0'>
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery.tools.min.js?ver=1.2.6'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/custom.js?ver=1.1.1'>
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.min.js?ver=3.1.6'></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var vlpp_vars = {
+			"prettyPhoto_rel": "wp-video-lightbox",
+			"animation_speed": "fast",
+			"slideshow": "5000",
+			"autoplay_slideshow": "false",
+			"opacity": "0.80",
+			"show_title": "true",
+			"allow_resize": "true",
+			"allow_expand": "true",
+			"default_width": "640",
+			"default_height": "480",
+			"counter_separator_label": "\/",
+			"theme": "pp_default",
+			"horizontal_padding": "20",
+			"hideflash": "false",
+			"wmode": "opaque",
+			"autoplay": "false",
+			"modal": "false",
+			"deeplinking": "false",
+			"overlay_gallery": "true",
+			"overlay_gallery_max": "30",
+			"keyboard_shortcuts": "true",
+			"ie6_fallback": "true"
+		};
+		/* ]]> */
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/wp-video-lightbox/js/video-lightbox.js?ver=3.1.6'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/plugins/sp-faq/js/jquery.accordion.js?ver=3.3.2'>
+	</script>
+	<link rel='https://api.w.org/' href='https://dev.ea:8890/wp-json/' />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dev.ea:8890/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dev.ea:8890/wp-includes/wlwmanifest.xml" />
+	<meta name="generator" content="WordPress 5.3.2" />
+	<link rel='shortlink' href='https://dev.ea:8890/' />
+	<link rel="alternate" type="application/json+oembed"
+		href="https://dev.ea:8890/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev.ea%3A8890%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://dev.ea:8890/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev.ea%3A8890%2F&#038;format=xml" />
+	<script>
+		WP_VIDEO_LIGHTBOX_VERSION = "1.8.8";
+		WP_VID_LIGHTBOX_URL = "https://dev.ea:8890/wp-content/plugins/wp-video-lightbox";
+
+		function wpvl_paramReplace(name, string, value) {
+			// Find the param with regex
+			// Grab the first character in the returned string (should be ? or &)
+			// Replace our href string with our new value, passing on the name and delimeter
+
+			var re = new RegExp("[\?&]" + name + "=([^&#]*)");
+			var matches = re.exec(string);
+			var newString;
+
+			if (matches === null) {
+				// if there are no params, append the parameter
+				newString = string + '?' + name + '=' + value;
+			} else {
+				var delimeter = matches[0].charAt(0);
+				newString = string.replace(re, delimeter + name + "=" + value);
+			}
+			return newString;
+		}
+	</script>
+	<style>
+		h1 {
+			font: Normal 32px/32px;
+			color: ;
+		}
+
+		h2 {
+			font: Normal 24px/24px;
+			color: ;
+		}
+
+		h3 {
+			font: Normal 18px/18px;
+			color: ;
+		}
+
+		h4 {
+			font: Normal 14px/18px;
+			color: ;
+		}
+
+		h5 {
+			font: Normal 12px/18px;
+			color: ;
+		}
+
+		h6 {
+			font: Normal 10px/18px;
+			color: ;
+		}
+
+		body {
+			font: Normal 12px/18px;
+			color: ;
+		}
+	</style>
+	<!-- BEGIN GADWP v5.3.9 Tag Manager - https://exactmetrics.com/ -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({});
+	</script>
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MNX9S6G');
+	</script>
+	<!-- END GADWP Tag Manager -->
+	<!-- Google Tag Manager -->
+	<script>
+		(function (a, s, y, n, c, h, i, d, e) {
+			s.className += ' ' + y;
+			h.start = 1 * new Date;
+			h.end = i = function () {
+				s.className = s.className.replace(RegExp(' ?' + y), '')
+			};
+			(a[n] = a[n] || []).hide = h;
+			setTimeout(function () {
+				i();
+				h.end = null
+			}, c);
+			h.timeout = c;
+		})(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+			'GTM-MNX9S6G': true
+		});
+	</script>
+	<!-- Hotjar Tracking Code -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () {
+				(h.hj.q = h.hj.q || []).push(arguments)
+			};
+			h._hjSettings = {
+				hjid: 1460740,
+				hjsv: 6
+			};
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script');
+			r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+	<script type="text/javascript">
+		// Init for audiojs
+		audiojs.events.ready(function () {
+			var as = audiojs.createAll();
+		});
+		// Init for si.files
+		SI.Files.stylizeAll();
+		$(function () {
+			$('.latestpost li:nth-child(4n), .related-posts li:nth-child(4n)').addClass('nomargin');
+			$('.post-holder .featured-thumbnail a, .latestpost li .featured-thumbnail a, .recent-posts .featured-thumbnail a, .related-posts .featured-thumbnail a, .es-carousel .featured-thumbnail a, .post_list li .featured-thumbnail a')
+				.append('<span class="stroke"></span>');
+			$('.post-holder .featured-thumbnail a, .latestpost li .featured-thumbnail a, .recent-posts .featured-thumbnail a, .related-posts .featured-thumbnail a, .es-carousel .featured-thumbnail a, .post_list li .featured-thumbnail a')
+				.hover(
+					function () {
+						$(this).find('.stroke').stop().animate({
+							opacity: 0.5
+						}, 350)
+					},
+					function () {
+						$(this).find('.stroke').stop().animate({
+							opacity: 0
+						}, 350)
+					}
+				);
+			if ($.browser.msie && $.browser.version < 10) {
+				jQuery('input[type="submit"], input[type="reset"]').hover(function () {
+						jQuery(this).addClass('submit-hover')
+					},
+					function () {
+						jQuery(this).removeClass('submit-hover')
+					});
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		// Nivo Slider
+		jQuery(window).load(function () {
+			// nivoslider init
+			if (jQuery().nivoSlider) {
+				jQuery('#slider').nivoSlider({
+					effect: 'random',
+					slices: 15,
+					boxCols: 8,
+					boxRows: 8,
+					animSpeed: 500,
+					pauseTime: 5000,
+					directionNav: true,
+					directionNavHide: false,
+					controlNav: true,
+					captionOpacity: 0.8
+				});
+			}
+		});
+	</script>
+	<script async src="https://dev.ea:8890/wp-content/themes/eatheme2020/js/jquery-ui.min.js" type="text/javascript">
+	</script>
+
+
+	<style type="text/css">
+		.async-hide {
+			opacity: 0 !important;
+		}
+	</style>
+	<style type="text/css">
+		#optanon {
+			display: none;
+		}
+	</style>
+	<style type="text/css">
+		.optanon-alert-box-wrapper {
+			display: none !important;
+		}
+	</style>
+	<!-- <style>
+			#optanon,
+			.optanon-alert-box-wrapper,
+			.async-hide {
+				opacity: 0 !important;
+				display: none !important;
+			}
+		</style> -->
+</head>
+
+<body data-rsssl=1
+	class="home page-template page-template-page-v2-home page-template-page-v2-home-php page page-id-41495">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNX9S6G" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="header-top">
+		<a href="#">CONTACT OUR ADVISORS</a>
+		<span class="working-hrs"><b>☎ 0203 409 4215</b> <span class="hidden-xs">(MON - FRI: 9.00am –
+				5.30pm)</span></span>
+	</div>
+	<header id="header">
+		<div class="container_16 clearfix header-inner">
+			<div class="col-sm-3 col-6 logo">
+				<a href="https://dev.ea:8890/" id="logo"><img
+						src="https://dev.ea:8890/wp-content/uploads/2020/01/logo-extensionarchitecture.png"
+						alt="Extension Architecture" class="img-responsive" title=""></a>
+				<p class="tagline"></p>
+			</div>
+			<div class="col-sm-9 col-6 connections-and-primary-container">
+				<div class="connections">
+					<div class="col-sm-4 col-xs-4 quote-a-free-request">
+						<a href="/quote-request/" class="button-md">Get a free quote</a>
+					</div>
+				</div>
+				<!-- Responsive Menu -->
+				<div class="mobile-nav">
+					<div class="menu-btn showInResponsive">
+						<span></span>
+						<span></span>
+						<span></span>
+						<div class="menu-label">MENU</div>
+					</div>
+					<div class="responsive-menu-container">
+						<div id="responsive-menu">
+							<!-- NON-RESPONSIVE -> RESPONSIVE CONVERSION TARGET -->
+							<div id="menuHeader">
+								<div class="menuLogo "></div>
+								<div class="menu-btn expandedMenu">
+									<span class="expandedMenu"></span>
+									<span class="expandedMenu"></span>
+								</div>
+							</div>
+							<nav id="nav-center">
+								<ul id="c-navigation" class="accordion-container sf-menu">
+									<li id="menu-item-8749"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8749">
+										<a href="#">Services</a>
+										<div class="drop-down-open accordion-child-switch"><span
+												class="dropdownArrow accordion-grandchild-switch"></span></div>
+										<div class="accordion-child-switch mobile-clickbox"></div>
+										<ul class="c-navigation-submenu accordion-item">
+											<li id="menu-item-41493"
+												class="show-children menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41493">
+												<a href="https://dev.ea:8890/our-services/house-extensions/">House
+													Extensions – v2</a>
+												<div class="drop-down-open accordion-child-switch"><span
+														class="dropdownArrow accordion-grandchild-switch"></span></div>
+												<div class="accordion-child-switch mobile-clickbox"></div>
+												<ul class="c-navigation-submenu accordion-item">
+													<li id="menu-item-41478"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41478">
+														<a
+															href="https://dev.ea:8890/our-services/house-extensions/single-storey-extensions/">Single
+															Storey Extensions</a></li>
+												</ul>
+											</li>
+											<li id="menu-item-34339"
+												class="show-children menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34339">
+												<a href="https://dev.ea:8890/house-extensions/">House Extensions</a>
+												<div class="drop-down-open accordion-child-switch"><span
+														class="dropdownArrow accordion-grandchild-switch"></span></div>
+												<div class="accordion-child-switch mobile-clickbox"></div>
+												<ul class="c-navigation-submenu accordion-item">
+													<li id="menu-item-838"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-838">
+														<a title="Single Storey Extension"
+															href="https://dev.ea:8890/case-studies/residential-single-storey-extension/">Single
+															Storey Extension</a></li>
+													<li id="menu-item-851"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851">
+														<a title="Double Storey Extension"
+															href="https://dev.ea:8890/case-studies/residential-double-storey-extension/">Double
+															Storey Extension</a></li>
+													<li id="menu-item-850"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-850">
+														<a title="Convert to Flat"
+															href="https://dev.ea:8890/case-study/convert-to-flat-in-london/">Convert
+															to Flat</a></li>
+													<li id="menu-item-239"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-239">
+														<a title="Loft Conversion"
+															href="https://dev.ea:8890/case-study/loft-conversion-in-london/">Loft
+															Conversion</a></li>
+													<li id="menu-item-30686"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30686">
+														<a
+															href="https://dev.ea:8890/case-study/change-of-use-planning-application/">Change
+															of Use</a></li>
+												</ul>
+											</li>
+											<li id="menu-item-41346"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41346">
+												<a href="https://dev.ea:8890/new-builds/">New Builds</a></li>
+											<li id="menu-item-41049"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41049">
+												<a href="#">How we work</a>
+												<div class="drop-down-open accordion-child-switch"><span
+														class="dropdownArrow accordion-grandchild-switch"></span></div>
+												<div class="accordion-child-switch mobile-clickbox"></div>
+												<ul class="c-navigation-submenu accordion-item">
+													<li id="menu-item-4405"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4405">
+														<a href="https://dev.ea:8890/services/permitted-development/">Permitted
+															Development</a></li>
+													<li id="menu-item-785"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-785">
+														<a title="Planning Applications"
+															href="https://dev.ea:8890/services/planning-applications/">Planning
+															Applications</a></li>
+													<li id="menu-item-12988"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12988">
+														<a href="https://dev.ea:8890/services/tender-pack/">Tender
+															Pack</a></li>
+													<li id="menu-item-825"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-825">
+														<a title="Project Management"
+															href="https://dev.ea:8890/services/project-management/">Project
+															Management</a></li>
+													<li id="menu-item-2731"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2731">
+														<a title="3D Visualisations "
+															href="https://dev.ea:8890/services/3d-visualisations/">3D
+															Visualisations / Immersive Design</a></li>
+													<li id="menu-item-31845"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31845">
+														<a href="https://dev.ea:8890/services/kitchen-design/">Kitchen
+															Design</a></li>
+												</ul>
+											</li>
+											<li id="menu-item-827"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-827">
+												<a title="Building Regulation Drawings"
+													href="https://dev.ea:8890/services/building-regulations-drawings/">Building
+													Regulations Drawings</a></li>
+											<li id="menu-item-41001"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41001">
+												<a href="https://dev.ea:8890/services/structural-calculations/">Structural
+													Calculations</a></li>
+										</ul>
+									</li>
+									<li id="menu-item-41061"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41061">
+										<a href="https://dev.ea:8890/case-study">Case Studies</a></li>
+									<li id="menu-item-8745"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8745">
+										<a href="#">Pricing</a>
+										<div class="drop-down-open accordion-child-switch"><span
+												class="dropdownArrow accordion-grandchild-switch"></span></div>
+										<div class="accordion-child-switch mobile-clickbox"></div>
+										<ul class="c-navigation-submenu accordion-item">
+											<li id="menu-item-40979"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40979">
+												<a
+													href="https://dev.ea:8890/pricing/single-storey-extension-for-residential/">Single
+													Storey Extension</a></li>
+											<li id="menu-item-963"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-963">
+												<a title="Double Storey Extension"
+													href="https://dev.ea:8890/pricing/double-storey-extension-for-residential/">Double
+													Storey Extension</a></li>
+											<li id="menu-item-969"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-969">
+												<a title="Convert to Flat"
+													href="https://dev.ea:8890/pricing/convert-to-flat-for-residential/">Convert
+													to Flat</a></li>
+											<li id="menu-item-985"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-985">
+												<a title="3D Visualisation"
+													href="https://dev.ea:8890/pricing/pricing-3d-visualisation-architectural-drawings/">3D
+													Visualisation</a></li>
+											<li id="menu-item-972"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972">
+												<a title="Loft Conversion"
+													href="https://dev.ea:8890/pricing/loft-conversion-for-residential/">Loft
+													Conversion</a></li>
+											<li id="menu-item-984"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-984">
+												<a title="New Builds for Developers"
+													href="https://dev.ea:8890/pricing/new-builds-for-developers/">New
+													Builds for Developers</a></li>
+											<li id="menu-item-983"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-983">
+												<a title="Change of Use"
+													href="https://dev.ea:8890/pricing/change-of-use/">Change of Use</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-39861"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39861">
+										<a href="#">Advice</a>
+										<div class="drop-down-open accordion-child-switch"><span
+												class="dropdownArrow accordion-grandchild-switch"></span></div>
+										<div class="accordion-child-switch mobile-clickbox"></div>
+										<ul class="c-navigation-submenu accordion-item">
+											<li id="menu-item-29392"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29392">
+												<a href="https://dev.ea:8890/info-library/frequently-asked-questions/">Frequently
+													Asked Questions</a></li>
+											<li id="menu-item-1078"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1078">
+												<a title="Planning Permission and Application in London Boroughs"
+													href="https://dev.ea:8890/planning-applications/">Planning
+													Applications and drawings in London</a></li>
+										</ul>
+									</li>
+									<li id="menu-item-4563"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4563">
+										<a href="https://dev.ea:8890/news/">News</a></li>
+									<li id="menu-item-1112"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1112">
+										<a title="About" href="/about-ea-extension-architecture/">About</a></li>
+								</ul>
+							</nav>
+							<!-- END NAVIGATION MENU -->
+						</div>
+						<!-- NON-RESPONSIVE -> RESPONSIVE CONVERSION TARGET -->
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+	<div id="main" class="main-content">
+		<!-- this encompasses the entire Web site -->
+
+
+		<section class="home-header">
+			<div class="fade-mask home-header-bg">
+				<!-- IMAGE -->
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<h1 class="home-title">
+							<span class="sup">We are architects specialising in</span>
+							<span class="main">Planning Application & Building Regulation Drawings</span>
+						</h1>
+					</div>
+					<div class="col-lg-8">
+						<div class="quote-box">
+							<div class="quote-box-inner">
+								<h3>Let's make your plan happen. Now.</h3>
+								<div class="flex-container">
+									<input type="text" placeholder="Enter your property postcode" name="singular"
+										id="singular">
+									<a href="https://staging.tired-narrative.flywheelsites.com/quote-request?Postcode="
+										id="Postcode-for-Quote" class="btn btn-vertical-effect">Get a free quote</a>
+									<script>
+										$('#singular').on('input', function () {
+											var href = new URL($('#Postcode-for-Quote').prop('href'));
+											href.searchParams.set('Postcode', this.value);
+											$('#Postcode-for-Quote').prop('href', href.toString())
+										});
+									</script>
+								</div>
+								<p>Or speak to one of our advisors on <strong>0203 409 4215</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#EA-Services" class="btn service-link smooth-scroll">View our Services</a>
+			</div>
+		</section>
+
+
+
+
+
+
+
+		<div class="primary_content_wrap">
+			<div class="container_16 clearfix">
+				<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<!-- Breadcrumb NavXT 6.3.0 -->
+					<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemprop="item" typeof="WebPage" title="Go to Extension Architecture."
+							href="https://dev.ea:8890" class="home current-item"><span itemprop="name">Home</span></a>
+						<meta itemprop="position" content="1">
+					</span>
+				</div>
+				<div id="content" class="container v2-home">
+					<h1 class="sp-title">* Home</h1>
+					<div id="post-41495" class="page post-41495 type-page status-publish hentry">
+
+
+
+
+						<section class="section-item fullwidth hero">
+							<div class="hou-ext-content bg-fill parallax-bg">
+								<div class="fade-mask bg-fill">
+									<!-- 0 -->
+								</div>
+								<div class="container serv-overview" id="EA-Services">
+									<div class="row">
+										<div class="col-md-8 col-xl-7">
+											<h2 class="hero-title">
+												<span class="textbg-m">
+													Our Services
+												</span>
+												<span class="textbg">
+													<span>EA's</span>
+													<span class="txt-rotate" data-period="2000"
+														data-rotate='[ "House Extension Services", "Planning Applications", "Building Regulation Drawings" ]'>
+														<!-- House Extension Services --></span>
+												</span>
+											</h2>
+											<p class="hero-desc">
+												<span>EA is one of the leading Architect & Planning Consultant practices
+													in London. We specialise in <a
+														href="/services/planning-applications/">Planning
+														Applications</a>, <a
+														href="/services/building-regulations-drawings/">Building
+														Regulation Drawings</a>, Architectural Design and Project
+													Management. However you are <a href="/house-extensions/">planning to
+														improve your home</a>, we at Extension Architecture are here to
+													help.</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="container serv-items">
+									<div class="row">
+										<div class="col-md-6 item wide">
+											<a class="serv-item bg-fill" href="/our-services/new-build"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-new-build--lg.jpg');">
+												<span class="desc-container">
+													New Build
+												</span>
+											</a>
+										</div>
+										<div class="col-md-6 item wide">
+											<!-- empty -->
+										</div>
+										<div class="col-md-6 item wide">
+											<a class="serv-item bg-fill"
+												href="/our-services/house-extensions/single-storey-extensions"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-single-storey-extension--lg.jpg');">
+												<span class="desc-container">
+													Single Storey Extensions
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-6 item wide">
+											<a class="serv-item bg-fill"
+												href="/our-services/house-extensions/double-storey-extensions"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-double-storey-extension--lg.jpg');">
+												<span class="desc-container">
+													Double Storey Extensions
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-4 item">
+											<a class="serv-item bg-fill"
+												href="/our-services/house-extensions/loft-conversion"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-loft-conversion--lg.jpg');">
+												<span class="desc-container">
+													Loft Conversion
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-4 item">
+											<a class="serv-item bg-fill"
+												href="/our-services/house-extensions/basement-extensions"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-basement-extension--lg.jpg');">
+												<span class="desc-container">
+													Basement Extensions
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-4 item">
+											<a class="serv-item bg-fill"
+												href="/our-services/house-extensions/flat-conversion"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-flat-conversion--lg.jpg');">
+												<span class="desc-container">
+													Flat Conversion
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-6 item wide">
+											<a class="serv-item bg-fill" href="/our-services/change-of-use"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-change-of-use--lg.jpg');">
+												<span class="desc-container">
+													Change of Use
+												</span>
+											</a>
+										</div>
+										<div class="col-6 col-md-6 item wide">
+											<a class="serv-item bg-fill" href="/our-services/commercial"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-serv-commercial--lg.jpg');">
+												<span class="desc-container">
+													Commercial
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="other-serv-content">
+								<div class="container serv-items">
+									<div class="row">
+										<div class="col-md-6 item wide">
+											<a class="serv-item bg-fill" href="/services/building-regulations-drawings">
+												<span class="desc-container">
+													Building Regulation Drawings
+													<span class="small">Find out more for your home renovation and
+														extension</span>
+												</span>
+											</a>
+										</div>
+										<div class="col-md-6 item wide">
+											<a class="serv-item bg-fill" href="/services/structural-calculations/">
+												<span class="desc-container">
+													Structural Calculations
+													<span class="small">Learn more about Structural Calculations and why
+														you need them?</span>
+												</span>
+											</a>
+										</div>
+										<div class="col-12 cta-container">
+											<p>
+												Not sure what you need? Please contact our advisor for a free
+												consultation
+											</p>
+											<div class="cta-container">
+												<a href="/get-a-consultation" class="btn">Get a Consultation</a>
+												<a href="/get-a-quote" class="btn btn-line">Get a Free Quote</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-item fullwidth project">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6 desc-item">
+										<h2 class="section-title">
+											<span class="line-black">Explore our architect projects</span>
+										</h2>
+										<p class="desc">
+											Extension Architecture have decades of experience on completing House
+											Extension and Planning Application projects throughout London.
+										</p>
+										<p class="desc">
+											If you would like to see the type of work we can do for you, simple take a
+											look at the full range of projects we have completed for our satisfied
+											customers.
+										</p>
+										<div class="cta-container">
+											<a href="/case-study" class="btn">View our Case Studies</a>
+										</div>
+									</div>
+									<div class="col-md-6 image-item">
+										<div class="row">
+											<div class="col-6">
+												<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-project-a.jpg"
+													alt="EA Cast Study">
+											</div>
+											<div class="col-6">
+												<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-project-b.jpg"
+													alt="EA Cast Study">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container">
+								<div class="featured-in">
+									<h3 class="title">
+										AS FEATURED IN
+									</h3>
+									<div class="logos flex-container">
+										<div class="flex-item">
+											<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-logo-channel-four.png"
+												alt="EA - as featured in - Chnnel4">
+										</div>
+										<div class="flex-item">
+											<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-logo-homebuilding-reno.png"
+												alt="EA - as featured in - Homebuilding & Renovation">
+										</div>
+										<div class="flex-item">
+											<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-logo-architects-journal.png"
+												alt="EA - as featured in - The Architects' Journal">
+										</div>
+										<div class="flex-item">
+											<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-logo-daily-mail.png"
+												alt="EA - as featured in - Daily Mail">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-item fullwidth why-choose">
+							<div class="container">
+								<h2 class="section-title">
+									<span class="line-purple">Why choose our architect services</span>
+								</h2>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="item">
+											<div class="image-container bg-fill"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-1.jpg');">
+												<!-- <img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-1.jpg" alt="Why you choose EA"> -->
+											</div>
+											<h3 class="title">Highly Experienced Architects</h3>
+											<p class="desc">Our London-based, multidisciplinary team of architectural
+												designers consist of highly talented creatives and technicians alike. We
+												thrive on a challenge and never fail to deliver excellence. From
+												residential property to cultural buildings and iconic commercial
+												landmarks, our team’s experience spans projects of all description.</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item">
+											<div class="image-container bg-fill"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-2.jpg');">
+												<!-- <img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-2.jpg" alt="Why you choose EA"> -->
+											</div>
+											<h3 class="title">Dedicated Planning Consultants</h3>
+											<p class="desc">Our dedicated planning team provides a comprehensive range
+												of expert planning consultancy services. Our extensive planning
+												knowledge and experience will guide you effortlessly through the
+												intricacies of your London borough council’s planning and approval
+												processes.</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item">
+											<div class="image-container bg-fill"
+												style="background-image: url('https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-3.jpg');">
+												<!-- <img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-home-why-choose-3.jpg" alt="Why you choose EA"> -->
+											</div>
+											<h3 class="title">Expert Care & Management</h3>
+											<p class="desc">Our team of architects, designers, surveyors, technicians
+												and planning officers have seen it all before. We’re the leading
+												residential architect in the UK and have worked with projects of all
+												shapes and sizes. This means we have helped thousands of people extend
+												up and down the country - all from under one roof!</p>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 cta-container">
+										<a href="/get-a-consultation" class="btn">Get a Consultation</a>
+										<a href="/get-a-quote" class="btn btn-line">Get a Free Quote</a>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-item fullwidth flex-container extra-info">
+							<div class="col-md-6 bg-fill local-info-container">
+								<div class="item local-info">
+									<h2 class="section-title">
+										<span class="line-white">Our service area in London</span>
+									</h2>
+									<h3 class="strapline">
+										Learn about your local Planning and Architecture Guide in London
+									</h3>
+									<div class="item-body">
+										<div class="flex-container">
+											<div class="flex-item">
+												<a href="/planning-applications-and-drawings-in-london/bromley-architects-planning-permissions/"
+													class="local-link">Bromley Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/epsom-and-ewell/"
+													class="local-link">Epsom and Ewell Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/camden/" class="local-link">Camden
+													Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/portfolio_category/kensington-and-chelsea/"
+													class="local-link">Kensington and Chelsea Planning &
+													Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/wandsworth/"
+													class="local-link">Wandsworth Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/croydon/" class="local-link">Croydon
+													Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/southwark-planning/"
+													class="local-link">Southwark Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/richmond/" class="local-link">Richmond
+													upon Thames Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/hounslow/" class="local-link">Hounslow
+													Planning & Architecture</a>
+											</div>
+											<div class="flex-item">
+												<a href="/planning-applications/merton-planning/"
+													class="local-link">Merton Planning & Architecture</a>
+											</div>
+										</div>
+
+										<div class="cta-container">
+											<a href="#" class="btn">Our service area and local planning guide</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 faq-info-container">
+								<div class="item faq-info">
+									<h2 class="section-title">
+										<span class="line-purple">Questions, you may ask</span>
+									</h2>
+									<div class="item-body">
+										<div class="accordion" id="FaqAccordion">
+											<div class="faq-card clearfix">
+												<a href="#" class="faq-head" data-toggle="collapse"
+													data-target="#collapseOne" aria-expanded="false"
+													aria-controls="collapseOne">
+													What is a planning application?
+												</a>
+												<div id="collapseOne" class="faq-body collapse"
+													aria-labelledby="headingOne" data-parent="#FaqAccordion">
+													<p>A planning application is details requested by local authorities
+														for the owner of the land to gain Planning permission or
+														planning consent in order to be allowed to build on land, or
+														change the use of your land or your building. In simple terms it
+														is a medium to check that your proposed development is suited to
+														the site, street, and area. If we did not have this medium in
+														place, we could find buildings like in other parts of the world
+														where there is no uniformity in their designs, form or function.
+														So it’s a way to keep your home in situ with the characteristics
+														of your area.</p>
+													<p>Local Planning Authorities are generally the local council
+														borough and these LPAs will have guidelines and links on their
+														websites to downloading an application form. They are usually
+														receptive to pre-applications, but since three years ago, most
+														of the London Boroughs have adopted a fee for their pre-
+														application advise. Also most have given guidelines of
+														approximately 6-8 weeks for their advise on the likelihood of
+														the planning application being granted.</p>
+												</div>
+											</div>
+											<div class="faq-card clearfix">
+												<a href="#" class="faq-head" data-toggle="collapse"
+													data-target="#collapseTwo" aria-expanded="false"
+													aria-controls="collapseTwo">
+													How far can you extend your house without planning permission?
+												</a>
+												<div id="collapseTwo" class="faq-body collapse"
+													aria-labelledby="headingOne" data-parent="#FaqAccordion">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+													terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+													skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+													Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+													single-origin coffee nulla assumenda shoreditch et. Nihil anim
+													keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+													sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+													occaecat craft beer farm-to-table, raw denim aesthetic synth
+													nesciunt you probably haven't heard of them accusamus labore
+													sustainable VHS.
+												</div>
+											</div>
+											<div class="faq-card clearfix">
+												<a href="#" class="faq-head" data-toggle="collapse"
+													data-target="#collapseThree" aria-expanded="false"
+													aria-controls="collapseThree">
+													Do I need planning permission for my proposal?
+												</a>
+												<div id="collapseThree" class="faq-body collapse"
+													aria-labelledby="headingOne" data-parent="#FaqAccordion">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+													terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+													skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+													Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+													single-origin coffee nulla assumenda shoreditch et. Nihil anim
+													keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+													sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+													occaecat craft beer farm-to-table, raw denim aesthetic synth
+													nesciunt you probably haven't heard of them accusamus labore
+													sustainable VHS.
+												</div>
+											</div>
+											<div class="faq-card clearfix">
+												<a href="#" class="faq-head" data-toggle="collapse"
+													data-target="#collapseFour" aria-expanded="false"
+													aria-controls="collapseFour">
+													What is the difference between other Planning Companies and
+													Extension Architecture?
+												</a>
+												<div id="collapseFour" class="faq-body collapse"
+													aria-labelledby="headingOne" data-parent="#FaqAccordion">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+													terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+													skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+													Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+													single-origin coffee nulla assumenda shoreditch et. Nihil anim
+													keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+													sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+													occaecat craft beer farm-to-table, raw denim aesthetic synth
+													nesciunt you probably haven't heard of them accusamus labore
+													sustainable VHS.
+												</div>
+											</div>
+											<div class="faq-card clearfix">
+												<a href="#" class="faq-head" data-toggle="collapse"
+													data-target="#collapseFive" aria-expanded="false"
+													aria-controls="collapseFive">
+													Does my project need building regulation approval?
+												</a>
+												<div id="collapseFive" class="faq-body collapse"
+													aria-labelledby="headingOne" data-parent="#FaqAccordion">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+													terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+													skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+													Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+													single-origin coffee nulla assumenda shoreditch et. Nihil anim
+													keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+													sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+													occaecat craft beer farm-to-table, raw denim aesthetic synth
+													nesciunt you probably haven't heard of them accusamus labore
+													sustainable VHS.
+												</div>
+											</div>
+										</div>
+
+										<div class="cta-container">
+											<a href="#" class="btn">Find more questions</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-item fullwidth contact-info" id="ContactInfo">
+							<div class="container">
+								<h2 class="section-title">
+									Tell us how we can help
+								</h2>
+								<h3 class="strapline">
+									Get friendly advice about our professional services including House Extensions,
+									Building Regulation Drawings and Planning Applications
+								</h3>
+								<div class="contact-body row">
+									<div class="col-md-4">
+										<div class="item">
+											<div class="icon">
+												<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-icon-consultation.svg"
+													alt="Get an Advice from EA" />
+											</div>
+											<div class="desc">
+												I am not sure of my plan. I would like to find out through professional
+												advice.
+											</div>
+											<div class="cta">
+												<a href="/get-a-consultation" class="btn">Get a free consultation</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item">
+											<div class="icon">
+												<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-icon-quote.svg"
+													alt="Get an Free Quote from EA" />
+											</div>
+											<div class="desc">
+												I know what I need for my plan. I would like get a quote from EA.
+											</div>
+											<div class="cta">
+												<a href="/get-a-quote" class="btn">Get a free quote</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item">
+											<div class="icon">
+												<img src="https://dev.ea:8890/_wpdev/dist/assets/images/ea-icon-call.svg"
+													alt="Call EA" />
+											</div>
+											<div class="desc">
+												If you would like to speak to us on the phone, please call us on
+											</div>
+											<div class="cta">
+												<a href="tel:0203 409 4215" class="btn tel">0203 409 4215</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+
+
+					</div>
+					<!--#post-# .post-->
+				</div>
+				<!--#content-->
+				<div style="clear:both"></div>
+			</div>
+			<!--.container-->
+		</div>
+		<!--.primary_content_wrap-->
+		<div style="clear:both"></div>
+		<footer id="footer" class="footer">
+			<div class="partners">
+				<h3 class="title">
+					<span class="title-inner">Who we are working with</span>
+				</h3>
+				<div class="partner-logo">
+					<div class="flex-container grid">
+						<div class="flex-item">
+							<a href="//www.houzz.co.uk/" target="_blank"><img
+									src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-partner-houzz.png"
+									alt="Houzz" /></a>
+						</div>
+						<div class="flex-item">
+							<a href="//www.planningportal.co.uk/" target="_blank"><img
+									src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-partner-planning-portal.png"
+									alt="Planning Portal" /></a>
+						</div>
+						<div class="flex-item">
+							<a href="//www.arb.org.uk/" target="_blank"><img
+									src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-partner-arb.png"
+									alt="ARB" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-main">
+				<div class="container">
+					<div class="flex-container grid upper-items">
+						<div class="flex-item">
+							<div class="item-inner">
+								<a href="/" class="footer-logo"><img
+										src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/ea-logo-bw.svg"
+										alt="Extension Architecture" /></a>
+							</div>
+						</div>
+						<div class="flex-item">
+							<div class="item-inner sn-links">
+								<a href="https://www.facebook.com/extensionarchitecture/" target="_blank">
+									<img src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-sn-facebook.png"
+										alt="Facebook Extension Architecture" />
+								</a>
+								<a href="https://www.instagram.com/extensionarchitecture/" target="_blank">
+									<img src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-sn-instagram.png"
+										alt="Instagram Extension Architecture" />
+								</a>
+								<a href="https://www.youtube.com/channel/UCGcRy_u53CAKGuGEAGhMzRA" target="_blank">
+									<img src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-sn-youtube.png"
+										alt="YouTube Extension Architecture" />
+								</a>
+								<a href="https://www.linkedin.com/company/extension-architecture/about/"
+									target="_blank">
+									<img src="https://dev.ea:8890/wp-content/themes/eatheme2020/images/footer-sn-linkedin.png"
+										alt="LinkedIn Extension Architecture" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="flex-container grid lower-items">
+						<div class="flex-item">
+							<div class="item-inner">
+								<div class="item-block serv-items">
+									<h3 class="title">
+										<a href="/house-extensions">House Extensions</a>
+									</h3>
+									<div class="flex-container">
+										<div class="flex-item featured-link">
+											<a href="/case-studies/residential-single-storey-extension/" class="">Single
+												Storey Extensions</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/case-studies/residential-double-storey-extension/" class="">Double
+												Storey Extensions</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/case-study/convert-to-flat-in-london/" class="">New Build</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/case-study/loft-conversion-in-london/" class="">Loft
+												Conversions</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/case-study/convert-to-flat-in-london/" class="">Flat
+												Conversions</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/case-study/change-of-use/" class="">Change of Use</a>
+										</div>
+										<div class="flex-item featured-link">
+											<a href="/house-extensions/basement-extension/" class="">Basement
+												Extensions</a>
+										</div>
+									</div>
+								</div>
+								<div class="item-block serv-items">
+									<div class="flex-container">
+										<div class="flex-item featured-link">
+											<h3 class="title">
+												<a href="/services/building-regulations-drawings/" class="">Building
+													Regulations Drawings</a>
+											</h3>
+										</div>
+										<div class="flex-item featured-link">
+											<h3 class="title">
+												<a href="/services/structural-calculations/" class="">Structural
+													Calculations</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+								<div class="item-block terms-items">
+									<a href="#">Terms of Use</a>
+									<a href="#">Privacy Notice</a>
+									<a href="#">Cookie Policy</a>
+								</div>
+							</div>
+						</div>
+						<div class="flex-item">
+							<div class="item-inner">
+								<div class="item-block about-items">
+									<h3 class="title">
+										<a href="/about-ea-extension-architecture/">About EA</a>
+									</h3>
+									<p>
+										Extension Architecture is one of the leading Architect & Planning Consultant
+										practices in London. We specialise in Planning Applications, Building Regulation
+										Drawings, Architectural Design and Project Management. However you are planning
+										to improve your home, we at Extension Architecture are here to help.
+									</p>
+								</div>
+								<div class="item-block about-items">
+									<p>
+										Phone: <a href="tel:02034094215"><b>0203 409 4215</b></a>
+									</p>
+									<p>
+										Email: <a
+											href="mailto:info@extensionarchitecture.co.uk"><b>info@extensionarchitecture.co.uk</b></a>
+									</p>
+								</div>
+								<div class="item-block about-items">
+									<p>
+										EA London office<br />
+										Battersea Office 3 River Reach, Gartons Way,<br />
+										London,<br />
+										SW11 3SX
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						Copyright © 2020 EA - Extension Architecture
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!--#main-->
+	<link rel='stylesheet' id='menu-style-css'
+		href='https://dev.ea:8890/wp-content/themes/eatheme2020/includes/ss-menu/ss-includes.css' type='text/css'
+		media='all' />
+	<script type='text/javascript' src='https://dev.ea:8890/wp-content/themes/eatheme2020/js/slick/slick.min.js'>
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/shortcode-toc/assets/vendor/js/anchorific.js?ver=1.0.3'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/tabs-responsive/assets/js/bootstrap.js?ver=5.3.2'></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var spuvar = {
+			"is_admin": "",
+			"disable_style": "",
+			"ajax_mode": "",
+			"ajax_url": "https:\/\/dev.ea:8890\/wp-admin\/admin-ajax.php",
+			"ajax_mode_url": "https:\/\/dev.ea:8890\/?spu_action=spu_load",
+			"pid": "41495",
+			"is_front_page": "1",
+			"is_category": "",
+			"site_url": "https:\/\/dev.ea:8890",
+			"is_archive": "",
+			"is_search": "",
+			"is_preview": "",
+			"seconds_confirmation_close": "5"
+		};
+		var spuvar_social = [];
+		/* ]]> */
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/popups/public/assets/js/public.js?ver=1.9.3.6'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.8'></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var JQLBSettings = {
+			"showTitle": "1",
+			"showCaption": "1",
+			"showNumbers": "1",
+			"fitToScreen": "1",
+			"resizeSpeed": "400",
+			"showDownload": "0",
+			"navbarOnTop": "0",
+			"marginSize": "0",
+			"slideshowSpeed": "4000",
+			"prevLinkTitle": "previous image",
+			"nextLinkTitle": "next image",
+			"closeTitle": "close image gallery",
+			"image": "Image ",
+			"of": " of ",
+			"download": "Download",
+			"pause": "(pause slideshow)",
+			"play": "(play slideshow)"
+		};
+		/* ]]> */
+	</script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.8'></script>
+	<script type='text/javascript' src='https://dev.ea:8890/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+	<script type='text/javascript'
+		src='https://dev.ea:8890/wp-content/themes/eatheme2020/includes/ss-menu/ss-includes.js?ver=5.3.2'></script>
+	<!-- this is used by many Wordpress features and for plugins to work properly -->
+</body>
+
+</html>

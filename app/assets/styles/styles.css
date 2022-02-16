@@ -1,0 +1,47 @@
+/* BASE */
+@import "base/_variables.pcss";
+@import "base/_style.pcss";
+@import "base/_style_base.pcss";
+@import "base/_bootstrap.css";
+@import "base/_animate.css";
+@import "base/_style_additional.css";
+
+/* MODULE */
+@import "modules/_base.pcss";
+@import "modules/_mask-shape.pcss";
+@import "modules/_contact-info.pcss";
+
+@import "modules/_component-breadcrumb.pcss";
+@import "modules/_component-hero.pcss";
+@import "modules/_component-read-more.pcss";
+@import "modules/_component-half-image.pcss";
+@import "modules/_component-work.pcss";
+@import "modules/_component-faq.pcss";
+@import "modules/_component-media-gallery.pcss";
+@import "modules/_component-related-articles.pcss";
+@import "modules/_component-testimonial.pcss";
+@import "modules/_component-extra-content.pcss";
+@import "modules/_component-local-info-overview.pcss";
+@import "modules/_component-featured-service.pcss";
+@import "modules/_component-why-choose.pcss";
+
+@import "modules/_home.pcss";
+@import "modules/_service-house-extension-hub.pcss";
+@import "modules/_service-prod.pcss";
+@import "modules/_portfolio.pcss";
+@import "modules/_architects-near-me.pcss";
+@import "modules/_basic-landing-page.pcss";
+@import "modules/_casestudy-hub.pcss";
+@import "modules/_pricing.pcss";
+@import "modules/_local.pcss";
+@import "modules/_contact-us.pcss";
+@import "modules/_planning.pcss";
+@import "modules/_blog.pcss";
+
+@import "modules/_footer-banner.pcss";
+/* @import "modules/_fsform.pcss"; */
+@import "modules/_form-style.pcss";
+@import "modules/_form-style-2021.pcss";
+
+/* Delete it later */
+@import "modules/_service-item.pcss";
