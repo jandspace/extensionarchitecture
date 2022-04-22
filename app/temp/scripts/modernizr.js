@@ -313,6 +313,28 @@ Modernizr.video.ogg     // 'probably'
     return bool;
   });
 
+/*!
+{
+  "name": "ES6 Arrow Functions",
+  "property": "arrow",
+  "authors": ["Vincent Riemer"],
+  "tags": ["es6"]
+}
+!*/
+/* DOC
+Check if browser implements ECMAScript 6 Arrow Functions per specification.
+*/
+
+  Modernizr.addTest('arrow', function() {
+    try {
+      // eslint-disable-next-line
+      eval('()=>{}');
+    } catch (e) {
+      return false;
+    }
+    return true;
+  });
+
 
   /**
    * List of property values to set for css tests. See ticket #21
@@ -410,28 +432,6 @@ Modernizr.video.ogg     // 'probably'
 !*/
 
   Modernizr.addTest('time', 'valueAsDate' in createElement('time'));
-
-/*!
-{
-  "name": "ES6 Arrow Functions",
-  "property": "arrow",
-  "authors": ["Vincent Riemer"],
-  "tags": ["es6"]
-}
-!*/
-/* DOC
-Check if browser implements ECMAScript 6 Arrow Functions per specification.
-*/
-
-  Modernizr.addTest('arrow', function() {
-    try {
-      // eslint-disable-next-line
-      eval('()=>{}');
-    } catch (e) {
-      return false;
-    }
-    return true;
-  });
 
 /*!
 {
